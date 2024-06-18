@@ -43,8 +43,9 @@
 
 #### Fine-Tuning
 - **Fine-Tuning**:
-  - Additional training on the model using new data specific to the desired task.
+  - Additional training on the already trained model using new data specific to the desired task.
   - An alternative when in-context learning with multiple examples is insufficient.
+  - jab kisi task ko karne ke liye bahut jyada examples nahi de sakte within context window means prompt engineering is not sufficient to produce desired outcomes ,to hum model ko fine tune karte hai.
   - Will be explored in detail in week 2 of the course.
 
 #### Practical Tips
