@@ -45,6 +45,32 @@
   - Allows the model to focus on different parts of the input sequence simultaneously.
 - **Feed-Forward Networks**:
   - Apply non-linear transformations to the attention outputs.
+  - ### Why Do We Use Feed-Forward Layers in Transformer Models?
+
+#### 1. **Non-Linearity Introduction**
+- **Enhancing Model Expressiveness**:
+  - The attention mechanism is primarily linear. By introducing non-linear transformations through feed-forward layers, the model can learn more complex patterns and representations.
+  - Non-linear functions, like ReLU (Rectified Linear Unit) used in these layers, help the network capture and represent complex relationships within the data.
+
+#### 2. **Feature Transformation**
+- **Independent Processing of Each Token**:
+  - After the attention mechanism has mixed the information from different tokens, the feed-forward layer applies the same transformation to each token independently.
+  - This allows the model to process and refine the features of each token individually, enhancing the overall representation of the sequence.
+
+#### 3. **Enhancing the Representational Power**
+- **Learning Complex Patterns**:
+  - By combining the output of the attention mechanism with feed-forward networks, the model can learn more nuanced and complex patterns in the data.
+  - This combination helps in building a rich representation that captures both the relationships among tokens (via attention) and the individual token features (via feed-forward layers).
+
+#### 4. **Efficiency and Parallelism**
+- **Parallel Processing**:
+  - Feed-forward layers enable efficient parallel processing of tokens. Unlike RNNs (Recurrent Neural Networks), which process tokens sequentially, transformers process tokens in parallel.
+  - This parallelism significantly speeds up training and inference, making transformers more efficient for handling large datasets.
+
+#### 5. **Layer Normalization and Stability**
+- **Stabilizing Training**:
+  - Feed-forward layers are often followed by layer normalization, which helps stabilize and speed up the training process.
+  - Layer normalization ensures that the outputs of the feed-forward layers have a consistent scale, improving the overall stability of the model.
 - **Self-Attention**:
   - Mechanism within the decoder that helps the model predict the next token based on previous tokens and encoder’s output.
 - **Softmax Layer**:
